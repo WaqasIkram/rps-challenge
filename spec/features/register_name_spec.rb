@@ -8,4 +8,5 @@ feature "Registering name" do
     # save_and_open_page
     expect(page).to have_content "Paula"
   end
+
 end

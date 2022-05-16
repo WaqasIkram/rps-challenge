@@ -1,3 +1,7 @@
+inherit_from:
+  - .rubocop_todo.yml
+  - https://raw.githubusercontent.com/makersacademy/scaffolint/v2.2.0/.rubocop.yml
+
 #    _____               ____ ____        __     _         __
 #   / ___/ _____ ____ _ / __// __/____   / /    (_)____   / /_
 #   \__ \ / ___// __ `// /_ / /_ / __ \ / /    / // __ \ / __/
@@ -9,5 +13,4 @@
 #
 # Configure Rubocop to use the config file in the Scaffolint GitHub repo
 
-inherit_from:
-  - https://raw.githubusercontent.com/makersacademy/scaffolint/v2.2.0/.rubocop.yml
+
