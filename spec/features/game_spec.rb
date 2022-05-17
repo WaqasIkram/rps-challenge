@@ -1,6 +1,8 @@
 require "spec_helper"
 
 feature "Playing the game" do
+  PLAY_NUM = 221563
+
   before do
     visit "/"
     fill_in "name", with: "Paula"
@@ -22,6 +24,12 @@ feature "Playing the game" do
     click_button "Rock"
     message = find(:css, "#opponent").text
     expect(possible_messages).to include message
+  end
+
+  scenario "options to pick randomly from rock, paper or scissors" do
+    srand(PLAY_NUM)
+    click_button "Rock"
+    expect(page).to have_content "Opponent picked Scissors!"
   end
 
   def possible_messages
